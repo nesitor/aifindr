@@ -1,7 +1,5 @@
 # Gateway de acciones seguras para el agente bancario (card-block-gateway)
 
-Prueba técnica AI Findr / The Agile Monkeys — Parte 2, Reto B.
-
 Un servidor MCP deja que el agente bancario de AI Findr **proponga** el bloqueo de una tarjeta de
 débito. Nunca lo ejecuta. Un sistema de banca simulado, independiente, deja que un **humano
 autenticado** revise esa propuesta y la confirme. Solo entonces se ejecuta, de forma simulada.
