@@ -1,0 +1,41 @@
+{
+  "name": "card-block-gateway",
+  "version": "1.0.0",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "tsx watch --env-file=.env src/server.ts",
+    "dev:local": "PUBLIC_BASE_URL=http://localhost:3000 DATABASE_PATH=./data/gateway-local.db tsx watch --env-file=.env src/server.ts",
+    "build": "tsc && cp src/db/schema.sql dist/db/schema.sql && vite build web",
+    "start": "node --env-file=.env dist/server.js",
+    "test": "vitest run",
+    "verify": "tsx scripts/verifyOAuth.ts"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "@ngrok/ngrok": "^1.7.0",
+    "better-sqlite3": "^11.5.0",
+    "cookie-parser": "^1.4.7",
+    "express": "^5.0.1",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.11",
+    "@types/cookie-parser": "^1.4.7",
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.9.0",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.7",
+    "@types/supertest": "^7.2.1",
+    "@vitejs/plugin-react": "^4.7.0",
+    "supertest": "^7.2.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.21",
+    "vitest": "^2.1.5"
+  }
+}
